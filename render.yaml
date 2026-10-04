@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: capcut-composio-mcp
+    runtime: docker
+    plan: free
+    healthCheckPath: /mcp
+    envVars:
+      - key: CAPCUT_BASE_URL
+        sync: false
+      - key: CAPCUT_API_KEY
+        sync: false
+      - key: BRIDGE_API_KEY
+        sync: false
+      - key: ALLOWED_HOSTS
+        value: "*"
+      - key: ALLOWED_ORIGINS
+        value: "*"
